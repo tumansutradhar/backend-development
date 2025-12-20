@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Todo List</h1>
+        <div class="input-section">
+            <input type="text" id="todoInput" placeholder="What do you need to do?" onkeypress="handleKeyPress(event)">
+            <button id="addBtn" onclick="addTodo()">Add</button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterTodos('all')">All</button>
+            <button class="filter-btn" onclick="filterTodos('active')">Active</button>
+            <button class="filter-btn" onclick="filterTodos('completed')">Completed</button>
+        </div>
+        <ul id="todoList"></ul>
+        <button class="clear-completed" onclick="clearCompleted()">Clear Completed</button>
+        <div class="stats" id="stats"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
