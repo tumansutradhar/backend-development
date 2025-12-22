@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quiz Challenge</h1>
+        <div class="progress-bar" id="progressBar" style="display: none;">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="start-screen" id="startScreen">
+            <p>
+                Test your knowledge with this fun quiz!<br>
+                Answer 10 questions and see how well you do.<br>
+                You have 30 seconds for each question.<br><br>
+                <strong>Good luck!</strong>
+            </p>
+            <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div class="quiz-screen" id="quizScreen">
+            <div class="quiz-header">
+                <div class="question-counter" id="questionCounter"></div>
+                <div class="score" id="scoreDisplay">Score: 0</div>
+                <div class="timer" id="timer">Time: 30s</div>
+            </div>
+            <div class="question-container">
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+            </div>
+            <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next Question</button>
+        </div>
+        <div class="results-screen" id="resultsScreen">
+            <div class="results-icon" id="resultsIcon"></div>
+            <div class="results-score" id="finalScore"></div>
+            <div class="results-message" id="resultsMessage"></div>
+            <div class="results-details">
+                <div class="result-item">
+                    <span class="result-label">Total Questions</span>
+                    <span class="result-value" id="totalQuestions"></span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Correct Answers</span>
+                    <span class="result-value" id="correctAnswers"></span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Wrong Answers</span>
+                    <span class="result-value" id="wrongAnswers"></span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Percentage</span>
+                    <span class="result-value" id="percentage"></span>
+                </div>
+            </div>
+
+            <button class="restart-btn" onclick="restartQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
