@@ -1,0 +1,4 @@
+Here is the result: Hello from first file.
+This is the second file.
+Here is the result: Hello from first file.
+This is the second file.
